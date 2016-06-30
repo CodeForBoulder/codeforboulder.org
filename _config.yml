@@ -3,3 +3,6 @@ exclude:
 markdown: kramdown
 sass:
     style: compressed
+
+theme:
+    color: '#eeeeee'

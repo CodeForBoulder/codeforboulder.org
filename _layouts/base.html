@@ -1,11 +1,49 @@
-<!doctype html>
+<!doctype HTML>
 <html>
-  <head>
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, maximum-scale=1">
+
+ <title>{{ page.title }}</title>
+
+ {% comment %}
+    By default `jekyll.environment` is not production. Run with the environment
+    variable `JEKYLL_ENV=production` to set the environment as production.
+    Github sets this when building and deploying the site.
+ {% endcomment %}
+ {% if jekyll.environment == "production" %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-74838907-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  {% endif %}
+
+  {% comment %}
+    Some more meta content for things like page description. `og` links are for
+    "Open Graph" a microformat that facebook and other sites will use to pull
+    in data when someone shares a link from our site.
+  {% endcomment %}
+  <meta name="description" content="{{ page.description }}">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+
+  {% comment %}
+    All the css is built by Jekyll's asset manager into a single file.
+    For changing styles, please edit `/assets/style.scss` rather than adding
+    css file imports here.
+  {% endcomment %}
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
 
 {{ content }}
 
-  </body>
+</body>
 </html>

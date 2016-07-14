@@ -1,5 +1,6 @@
 exclude:
  - README.md
+ - assets/img/Makefile
 markdown: kramdown
 sass:
     style: compressed

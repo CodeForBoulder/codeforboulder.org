@@ -5,11 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   id="svg2"
-   viewBox="0 0 16 16"
+   width="16"
    height="16"
-   width="16">
+   viewBox="0 0 16 16"
+   id="svg2"
+   version="1.1">
   <defs
      id="defs4" />
   <metadata
@@ -24,12 +24,18 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <circle
+     r="7.9925232"
+     cy="7.9925232"
+     cx="7.9925232"
+     id="path4185"
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
   <g
-     transform="translate(0,-1036.3622)"
-     id="layer1">
+     id="layer1"
+     transform="translate(0,-1036.3622)">
     <path
-       id="path6222"
+       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 8.6828766,1039.9269 -0.3083747,0.2746 -0.3400571,-0.031 -0.6948993,0.7098 -0.3062627,-0.031 -0.4372162,0.2429 -2.1839693,2.7648 -0.3062627,0 -0.4203191,0.2429 -2.71623254,4.2687 14.01837904,-0.016 -3.33087,-5.3373 -0.403422,-0.3063 -0.711796,-0.5831 -0.257683,-1.1806 -0.3738516,-1.0032 -1.2271628,-0.016 z m 0.4203191,0.9378 -1.4404904,1.6496 0.5343755,0.018 -1.3433312,1.8587 -0.3231599,0.209 -0.8089557,0.131 -0.2745803,0.2092 -0.4203191,0.4203 -0.8406382,-0.031 2.5704939,-3.2169 0.2112157,-0.1794 0.3062627,-0.031 0.3569542,-0.1627 1.1152184,-0.8554 0.3569544,-0.018 z m 0.337945,1.7468 0.097159,0.2577 -0.9694796,2.0551 -0.4372163,-0.018 0,-0.2113 -0.9209001,0.4689 -0.4541136,0.243 -0.2745802,-0.016 1.4721727,-1.7637 0.7286938,-0.2576 0.7582641,-0.7604 z m 0.6632173,0.6294 0.242898,0.018 1.100433,1.0032 0.145739,0.9864 -0.130954,0.2429 -0.9209,0.3379 -0.04858,-0.2259 -1.6495934,1.0666 0.016897,-0.4689 -0.1626362,-0.3718 1.2123777,-2.3929 0.1943189,-0.1944 z"
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+       id="path6222" />
   </g>
 </svg>

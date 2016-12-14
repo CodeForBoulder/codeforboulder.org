@@ -1,25 +1,25 @@
 <!doctype HTML>
 <html>
 <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, maximum-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1">
 
- <title>{{ page.title }}</title>
+  <title>{{ page.title }}</title>
 
- {% comment %}
-    By default `jekyll.environment` is not production. Run with the environment
-    variable `JEKYLL_ENV=production` to set the environment as production.
-    Github sets this when building and deploying the site.
- {% endcomment %}
- {% if jekyll.environment == "production" %}
-    <script>
-    </script>
+  {% comment %}
+  By default `jekyll.environment` is not production. Run with the environment
+  variable `JEKYLL_ENV=production` to set the environment as production.
+  Github sets this when building and deploying the site.
+  {% endcomment %}
+  {% if jekyll.environment == "production" %}
+  <script>
+  </script>
   {% endif %}
 
   {% comment %}
-    Some more meta content for things like page description. `og` links are for
-    "Open Graph" a microformat that facebook and other sites will use to pull
-    in data when someone shares a link from our site.
+  Some more meta content for things like page description. `og` links are for
+  "Open Graph" a microformat that facebook and other sites will use to pull
+  in data when someone shares a link from our site.
   {% endcomment %}
   <meta name="description" content="{{ page.description }}">
   <meta property="og:title" content="{{ page.title }}">
@@ -28,36 +28,62 @@
   <meta property="og:type" content="website">
 
   {% comment %}
-    All the css is built by Jekyll's asset manager into a single file.
-    For changing styles, please edit `/assets/style.scss` rather than adding
-    css file imports here.
+  All the css is built by Jekyll's asset manager into a single file.
+  For changing styles, please edit `/assets/style.scss` rather than adding
+  css file imports here.
   {% endcomment %}
   <link rel="stylesheet" href="/assets/style.css">
 
+  <link href="assets/css/libs/normalize.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/libs/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+  <link href="assets/css/libs/animate.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom Styles -->
+  <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/media-queries.css" rel="stylesheet" type="text/css">
+
+  <!-- JavaScript Libs -->
+  <script type="text/javascript"
+          src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
   {% comment %}
-    Every different system (especially mobile) has a different way of
-    representing a link with a icon. This should support most systems at most
-    resolutions.
-    There is one file: `assets/img/favicon.svg` that all the different icon
-    resolutions as built from.
+  Every different system (especially mobile) has a different way of
+  representing a link with a icon. This should support most systems at most
+  resolutions.
+  There is one file: `assets/img/favicon.svg` that all the different icon
+  resolutions as built from.
   {% endcomment %}
   <link rel="shortcut icon" href="favicon.ico">
   <meta name="theme-color" content="{{ site.theme.color }}">
 
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="57x57"
+        href="/assets/img/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60"
+        href="/assets/img/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72"
+        href="/assets/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76"
+        href="/assets/img/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114"
+        href="/assets/img/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120"
+        href="/assets/img/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144"
+        href="/assets/img/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152"
+        href="/assets/img/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="/assets/img/apple-touch-icon-180x180.png">
 
-  <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/assets/img/android-chrome-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png"
+        sizes="32x32">
+  <link rel="icon" type="image/png"
+        href="/assets/img/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png"
+        sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png"
+        sizes="16x16">
 
   <meta name="msapplication-TileColor" content="{{ site.theme.color }}">
   <meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png">
@@ -65,7 +91,223 @@
 
 <body>
 
-{{ content }}
+<!--
+* This checkbox input is for the mobile navigation.
+* When checked, the mobile navigation is visible.
+* For the mobile navigation to work, all of the site content
+* needs to be wrapped in 'PageWrap'.
+-->
+<input type="checkbox" id="sidebarToggle" name="" value="">
+
+<div class="PageWrap">
+
+  <!-- Mobile Navigation Toggle -->
+  <label class="MobileNavToggle animated fadeInRight" for="sidebarToggle"
+         id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="SiteContent">
+
+    <div class="TopBar animated fadeInDown" id="js-TopBar">
+      <ul class='TopBar__nav nav--left mobile-hide'>
+        <li><a href="#SplashHero">Home</a></li>
+        <li><a href="#about">About</a></li>
+
+      </ul>
+
+      <!-- LOGO -->
+      <a href="/"><img class="TopBar__logo" src="assets/img/svgs/cforb.svg" alt="Code for Boulder"></a>
+      <ul class='TopBar__nav nav--right mobile-hide'>
+        <li><a href="#CFBProjects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <!-- END OF: 'TopBar' -->
+
+    <header class="SplashHero" id="SplashHero">
+      <div class="SplashContent">
+        <h1 class="animated fadeInDown delay-07s">CODE FOR BOULDER</h1>
+        <div class="SplashContent__sloganMessage animated fadeInUp delay-1s">
+          PLANNING FOR THE FUTURE OF BOULDER
+        </div>
+        <a class="SplashContent__ctaButton animated fadeInUp delay-1s" href="http://www.meetup.com/CodeForBoulder/">Join Today</a>
+        <ul class="SplashContent__socialIcons animated fadeInUp delay-15s">
+          <li>
+            <a href="https://github.com/CodeForBoulder"><i class="fa fa-github" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/CodeforBoulder"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <li>
+            <a href="https://codeforboulder.herokuapp.com/"><i class="fa fa-slack" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Everything after the splash header/hero -->
+    <div class="MainContent">
+
+      <!-- What is CFA section -->
+      <section class="MeetupInfo grey-card" id="about">
+        <div class="MeetupInfo__meetupCol">
+          <h4>GROW</h4>
+          <p>
+            Help grow Code for America by participating in your local CfA brigade.
+            These brigades exist across the country assisting local governments to meet community needs through innovative tech projects.
+          </p>
+          <a class="MeetupInfo__btn" href="https://www.codeforamerica.org/join-us/volunteer-with-us/"><i class="fa fa-line-chart" aria-hidden="true"></i>CfA Brigades</a>
+        </div>
+        <div class="MeetupInfo__meetupCol">
+          <h4>LEARN</h4>
+          <p>
+            Learning a new technology is a great reason to join the Boulder Brigade.
+            We encourage members to explore whatever project they like, even if they have little to no experience working with the stack.
+          </p>
+          <a class="MeetupInfo__btn" href=""><i class="fa fa-book" aria-hidden="true"></i>Learn More</a>
+        </div>
+        <div class="MeetupInfo__meetupCol">
+          <h4>CONTRIBUTE</h4>
+          <p>
+            Contribute to helping your local community solve important issues.
+            We ask new members to look over our contribution guidelines so you have a good idea of what to expect at your first Meetup.
+          </p>
+          <a class="MeetupInfo__btn" href=""><i class="fa fa-users" aria-hidden="true"></i>Contribute Now</a>
+        </div>
+      </section>
+      <!-- End what is CFA section -->
+
+      <section class="MeetupInfo grey-card">
+        <div class="MeetupInfo__meetupCol MeetupInfo__newsSection">
+          {{ content }}
+        </div>
+      </section>
+
+      <section id="CFBProjects">
+        <!--
+        <div class="CFBProjects_title" id='js-CFBProjects__title'>
+          <h2>Current Projects</h2>
+        </div>
+        -->
+
+        <div class="grey-card">
+          <button class="projects-grid__close-btn hidden animated fadeInDown" id="js-projects-grid__close-btn" data-filter="*">
+            <svg viewbox="0 0 40 40">
+              <path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30"/>
+            </svg>
+          </button>
+          <div class="projects-grid">
+            <div class="project project--foto" data-filter=".project--foto">
+              <img class="project__img" src="assets/img/svgs/cforb.svg" alt="">
+              <h3>Project Name</h3>
+              <p>Blurb about project...</p>
+              <p>Stack: </p>
+            </div>
+            <div class="project project--luca" data-filter=".project--luca">
+              <img class="project__img" src="assets/img/svgs/cforb.svg" alt="">
+              <h3>Project Name</h3>
+              <p>Blurb about project...</p>
+              <p>Stack: </p>
+            </div>
+            <div class="project project--uni" data-filter=".project--uni">
+              <img class="project__img" src="assets/img/svgs/cforb.svg" alt="">
+              <h3>Project Name</h3>
+              <p>Blurb about project...</p>
+              <p>Stack: </p>
+            </div>
+            <div class="project project--vinyl" data-filter=".project--vinyl">
+              <img class="project__img" src="assets/img/svgs/cforb.svg" alt="">
+              <h3>Project Name</h3>
+              <p>Blurb about project...</p>
+              <p>Stack: </p>
+            </div>
+            <div class="project project--hipster" data-filter=".project--hipster">
+              <img class="project__img" src="assets/img/svgs/cforb.svg"alt="">
+              <h3>Project Name</h3>
+              <p>Blurb about project...</p>
+              <p>Stack: </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END OF: 'CFBProjects' -->
+
+      <section class="MeetupInfo grey-card contact-us">
+        <div class="MeetupInfo__meetupCol MeetupInfo__newsSection">
+          <h2>JOIN US ON SLACK</h2>
+          <p>
+            <i class="fa fa-slack"></i>
+          </p>
+          <p>
+            We use Slack to communicate during and between meetings.
+            You can invite yourself through our signup app and keep up-to-date on brigade activity.
+            Join us today and introduce yourself to the group!
+          </p>
+          <a class="MeetupInfo__btn" href="https://codeforboulder.herokuapp.com/">Join Us</a>
+        </div>
+        <div class="MeetupInfo__meetupCol MeetupInfo__newsSection">
+          <h2>COME TO A MEETUP</h2>
+          <p>
+            <i class="fa fa-meetup"></i>
+          </p>
+          <p>
+            We usually do most of our work at a bi-weekly Meetup held at various community-sponsored locations.
+            We start our meetings with introductions where you can learn about the current group projects and dive into one!
+          </p>
+          <a class="MeetupInfo__btn" href="http://www.meetup.com/CodeForBoulder/">Come On Down</a>
+        </div>
+      </section>
+      <!-- END OF: 'AboutCFB' -->
+
+      <footer>
+
+      </footer>
+
+    </div>
+    <!-- END OF: 'MainContent' -->
+  </div>
+  <!-- END OF: 'SiteContent' -->
+
+
+  <!-- Mobile Slideout Menu
+  This needs to come after the end of the 'SiteContent' div -->
+  <nav class="MobileNav">
+    <ul>
+      <li><a href="#SplashHero">Home</a></li>
+      <li><a href="#CFBProjects">Projects</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Contact</a></li>
+    </ul>
+
+    <img class="MobileNav__logo" src="img/svgs/cforb-invert-color.svg"
+         alt="Code for Boulder">
+  </nav>
+</div>
+<!-- END OF: 'page-wrap' -->
+
+<script type="text/template">
+
+</script>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+
+<!-- Other JS Scripts -->
+<script type="text/javascript" src="assets/js/libs/jquery.isotope.js"></script>
+<!--layout the grid of project thumbnails-->
+<script type="text/javascript" src="assets/js/libs/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="assets/js/libs/jquery.localScroll.min.js"></script>
+<!--scrollTo and localScroll animate local links-->
+<script type="text/javascript" src="assets/js/libs/wow.js"></script>
+
+<!--page-app is not a plugin.  author-defined.-->
+<script type="text/javascript" src="assets/js/page-app.js"></script>
+<script type="text/javascript" src="assets/js/custom/github-api.js"></script>
 
 </body>
 </html>

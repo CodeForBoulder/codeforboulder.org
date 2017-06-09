@@ -1,3 +1,10 @@
+update 6/9/2017
+
+This is the repo for the old Code for Boulder site, still hosted at [http://www.codeforboulder.org/](http://www.codeforboulder.org/) as of 6/9/2017. 
+
+If you'd like to contribute to the current site, please go to [this repo](https://github.com/CodeForBoulder/CodeForBoulder)!
+
+------
 # codeforboulder.org
 
 This is where we will eventually host the Code for Boulder site.
